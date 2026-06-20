@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrandKu</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="min-h-screen bg-white text-slate-900">
+    <!-- NAVBAR -->
+    <header class="h-[42px] bg-white border-b border-gray-100 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+      <div class="flex h-full items-center justify-between px-[18px]">
+        <!-- LOGO -->
+        <h1 class="text-[18px] font-bold text-blue-600">
+          BrandKu
+        </h1>
+
+        <!-- MENU -->
+        <nav class="flex items-center gap-[24px] text-[14px] font-normal text-slate-700">
+          <a href="#home" class="transition hover:text-blue-600">
+            Beranda
+          </a>
+
+          <a href="#fitur" class="transition hover:text-blue-600">
+            Fitur
+          </a>
+
+          <a href="#harga" class="transition hover:text-blue-600">
+            Harga
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- HERO SECTION -->
+      <section
+        id="home"
+        class="flex h-[280px] items-center justify-center bg-[#eff6ff] px-6 text-center"
+      >
+        <div class="mx-auto max-w-[720px]">
+          <h2 class="mb-[14px] text-[40px] font-extrabold leading-tight tracking-tight text-slate-950 md:text-[40px]">
+            Solusi Terbaik untuk Bisnismu
+          </h2>
+
+          <p class="mx-auto mb-[26px] max-w-[520px] text-[16px] leading-[1.65] text-slate-600">
+            Platform all-in-one untuk manajemen, pemasaran, dan pertumbuhan
+            bisnis kecil.
+          </p>
+
+          <a
+            href="#fitur"
+            class="inline-flex h-[42px] items-center justify-center rounded-full bg-blue-600 px-[28px] text-[15px] font-bold text-white shadow-sm transition hover:bg-blue-700"
+          >
+            Mulai Gratis
+          </a>
+        </div>
+      </section>
+
+      <!-- FITUR SECTION -->
+      <section id="fitur" class="bg-white px-6 py-[46px]">
+        <div class="mx-auto max-w-[790px]">
+          <!-- JUDUL SECTION -->
+          <h2 class="mb-[30px] text-center text-[28px] font-extrabold tracking-tight text-slate-950">
+            Mengapa BrandKu?
+          </h2>
+
+          <!-- CARD WRAPPER -->
+          <div class="grid grid-cols-1 gap-[22px] md:grid-cols-3">
+            <!-- CARD 1 -->
+            <article
+              class="min-h-[198px] rounded-[12px] border border-slate-200 bg-white px-[22px] py-[24px] shadow-sm"
+            >
+              <div class="mb-[18px] text-[30px] leading-none">
+                ⚡
+              </div>
+
+              <h3 class="mb-[12px] text-[17px] font-extrabold text-slate-950">
+                Mudah Digunakan
+              </h3>
+
+              <p class="text-[14px] leading-[1.65] text-slate-700">
+                Tidak perlu keahlian teknis. Setup dalam 5 menit.
+              </p>
+            </article>
+
+            <!-- CARD 2 -->
+            <article
+              class="min-h-[198px] rounded-[12px] border border-slate-200 bg-white px-[22px] py-[24px] shadow-md"
+            >
+              <div class="mb-[18px] text-[30px] leading-none">
+                🤖
+              </div>
+
+              <h3 class="mb-[12px] text-[17px] font-extrabold text-slate-950">
+                Serba Otomatis
+              </h3>
+
+              <p class="text-[14px] leading-[1.65] text-slate-700">
+                Otomatiskan tugas berulang dan fokus pada hal yang penting.
+              </p>
+            </article>
+
+            <!-- CARD 3 -->
+            <article
+              class="min-h-[198px] rounded-[12px] border border-slate-200 bg-white px-[22px] py-[24px] shadow-sm"
+            >
+              <div class="mb-[18px] text-[30px] leading-none">
+                📊
+              </div>
+
+              <h3 class="mb-[12px] text-[17px] font-extrabold text-slate-950">
+                Laporan Real-time
+              </h3>
+
+              <p class="text-[14px] leading-[1.65] text-slate-700">
+                Pantau performa bisnismu kapan saja dan di mana saja.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="flex h-[50px] items-center justify-center bg-slate-900 px-8 text-center">
+      <p class="text-[12px] text-slate-400">
+        © 2025 BrandKu. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>
