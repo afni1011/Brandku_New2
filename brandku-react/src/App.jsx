@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import CardGrid from "./components/CardGrid";
@@ -6,15 +5,13 @@ import Footer from "./components/Footer";
 import { featureData } from "./data/features";
 
 const App = () => {
-  const [features] = useState(featureData);
-
   return (
     <div className="min-h-screen bg-white text-slate-900">
       <Header />
 
       <main>
         <HeroSection />
-        <CardGrid features={features} />
+        <CardGrid features={featureData} />
       </main>
 
       <Footer />
