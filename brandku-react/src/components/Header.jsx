@@ -1,25 +1,65 @@
+import { useState } from "react";
+
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navItems = [
+    {
+      label: "Beranda",
+      href: "#home",
+    },
+    {
+      label: "Fitur",
+      href: "#fitur",
+    },
+    {
+      label: "Harga",
+      href: "#harga",
+    },
+  ];
+
   return (
-    <header className="h-[42px] border-b border-gray-100 bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
-      <div className="flex h-full items-center justify-between px-[18px]">
+    <header className="relative border-b border-gray-100 bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+      <div className="flex h-[42px] items-center justify-between px-[18px]">
         <h1 className="text-[18px] font-bold text-blue-600">
           BrandKu
         </h1>
 
-        <nav className="flex items-center gap-[24px] text-[14px] font-normal text-slate-700">
-          <a href="#home" className="transition hover:text-blue-600">
-            Beranda
-          </a>
-
-          <a href="#fitur" className="transition hover:text-blue-600">
-            Fitur
-          </a>
-
-          <a href="#harga" className="transition hover:text-blue-600">
-            Harga
-          </a>
+        <nav className="hidden items-center gap-[24px] text-[14px] font-normal text-slate-700 md:flex">
+          {navItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className="transition hover:text-blue-600"
+            >
+              {item.label}
+            </a>
+          ))}
         </nav>
+
+        <button
+          type="button"
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+          className="text-2xl text-slate-700 md:hidden"
+        >
+          {isMenuOpen ? "×" : "☰"}
+        </button>
       </div>
+
+      {isMenuOpen && (
+        <nav className="absolute left-0 top-full z-50 flex w-full flex-col gap-3 border-t border-gray-100 bg-white px-[18px] py-4 text-[14px] font-normal text-slate-700 shadow-sm md:hidden">
+          {navItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              onClick={() => setIsMenuOpen(false)}
+              className="transition hover:text-blue-600"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      )}
     </header>
   );
 };
