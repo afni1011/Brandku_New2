@@ -1,20 +1,22 @@
-const btnMulaiGratis = document.querySelector('#startButton');
-const tagInfo = document.querySelector('#tag-info');
+const btnMulaiGratis = document.querySelector("#startButton");
+const tagInfo = document.querySelector("#tag-info");
 
 let counter = 0;
 
-btnMulaiGratis.addEventListener('click', () => {
-  counter++;
+if (btnMulaiGratis && tagInfo) {
+  btnMulaiGratis.addEventListener("click", () => {
+    counter++;
 
-  if (counter === 1) {
-    console.log('clicked');
+    if (counter === 1) {
+      console.log("clicked");
 
-    tagInfo.classList.remove('hidden');
-    tagInfo.textContent = 'Clicked! Tombol Mulai Gratis berhasil diklik.';
-  } else if (counter === 2) {
-    console.log('off');
+      tagInfo.classList.remove("hidden");
+      tagInfo.textContent = "Clicked! Tombol Mulai Gratis berhasil diklik.";
+    } else if (counter === 2) {
+      console.log("off");
 
-    tagInfo.textContent = 'Off! Tombol sudah diklik dua kali.';
-    btnMulaiGratis.classList.add('hidden');
-  }
-});
+      tagInfo.textContent = "Off! Tombol sudah diklik dua kali.";
+      btnMulaiGratis.classList.add("hidden");
+    }
+  });
+}
