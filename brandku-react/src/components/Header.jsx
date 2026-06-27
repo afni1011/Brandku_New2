@@ -47,13 +47,13 @@ const Header = () => {
       </div>
 
       {isMenuOpen && (
-        <nav className="absolute left-0 top-full z-50 flex w-full flex-col gap-3 border-t border-gray-100 bg-white px-[18px] py-4 text-[14px] font-normal text-slate-700 shadow-sm md:hidden">
+        <nav className="absolute left-0 top-full z-50 flex w-full flex-col items-center gap-3 border-t border-gray-100 bg-white px-[18px] py-4 text-center text-[14px] font-normal text-slate-700 shadow-sm md:hidden">
           {navItems.map((item) => (
             <a
               key={item.label}
               href={item.href}
               onClick={() => setIsMenuOpen(false)}
-              className="transition hover:text-blue-600"
+              className="w-full transition hover:text-blue-600"
             >
               {item.label}
             </a>

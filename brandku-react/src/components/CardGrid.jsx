@@ -16,7 +16,6 @@ const CardGrid = ({ features }) => {
               icon={feature.icon}
               title={feature.title}
               description={feature.description}
-              shadow={feature.shadow}
             />
           ))}
         </div>
