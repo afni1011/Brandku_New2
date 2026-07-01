@@ -1,26 +1,4 @@
-import { useState } from "react";
-
-const HeroSection = () => {
-  const [clickCount, setClickCount] = useState(0);
-
-  const handleClick = () => {
-    setClickCount(clickCount + 1);
-  };
-
-  const buttonText = () => {
-    if (clickCount === 0) {
-      return "Mulai Gratis";
-    }
-
-    if (clickCount === 1) {
-      return "Clicked";
-    }
-
-    if (clickCount === 2) {
-      return "Clicked 2 kali";
-    }
-  };
-
+const HeroSection = ({ onStart }) => {
   return (
     <section
       id="home"
@@ -36,14 +14,13 @@ const HeroSection = () => {
           bisnis kecil.
         </p>
 
-        {clickCount < 3 && (
-          <button
-            onClick={handleClick}
-            className="inline-flex h-[42px] items-center justify-center rounded-full bg-blue-600 px-[28px] text-[15px] font-bold text-white shadow-sm transition hover:bg-blue-700"
-          >
-            {buttonText()}
-          </button>
-        )}
+        <button
+          type="button"
+          onClick={onStart}
+          className="inline-flex h-[42px] items-center justify-center rounded-full bg-blue-600 px-[28px] text-[15px] font-bold text-white shadow-sm transition hover:bg-blue-700"
+        >
+          Mulai Gratis
+        </button>
       </div>
     </section>
   );
